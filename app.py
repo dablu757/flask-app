@@ -11,7 +11,8 @@ def home():
     try:
         return success_responce(message='home call successfully')
     except Exception as e:
-        pass
+        LOGGER.info(f"error occured : {str(e)},", exc_info=True)
+        raise e
 
 
 
@@ -19,6 +20,6 @@ if __name__ == "__main__":
     app.run(
         host="0.0.0.0",
         port=8080,
-        debug=True
+        # debug=True
     )
 
