@@ -4,6 +4,7 @@ from logger import LOGGER
 from dotenv import load_dotenv
 import os
 from datetime import timedelta
+import sqlalchemy
 
 load_dotenv()
 _secreate_key = os.getenv('SECRET_KEY')
