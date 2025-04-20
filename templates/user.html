@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %} Login Page {% endblock %}
+{% block title %}User Page{% endblock %}
 
 {% block content %}
 
@@ -16,16 +16,9 @@
         {% endif %}
     {% endwith %}
 
-    <form action="#" method="POST">
-        <p><label for="name">Name:</label></p>
-        <p><input type="text" id="name" name="nm" /></p>
-        <p><input type="submit" value="Submit" /></p>
-    </form>
+    <h2>Welcome, {{ user }} 👋</h2>
+    <p>You are now logged in.</p>
+
+    <a href="{{ url_for('logout') }}" class="btn btn-outline-danger mt-3">Logout</a>
 
 {% endblock %}
-
-
-
-
-
-
